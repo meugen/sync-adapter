@@ -15,7 +15,7 @@ import java.util.*
 /**
  * Created by meugen on 02.12.2017.
  */
-class SyncAdapter(context: Context): RecyclerView.Adapter<SyncViewHolder>() {
+class SyncItemsAdapter(context: Context): RecyclerView.Adapter<SyncViewHolder>() {
 
     private val inflater = LayoutInflater.from(context)
     private var cursor: Cursor? = null

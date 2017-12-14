@@ -5,6 +5,7 @@ import android.content.ContentValues
 import android.content.UriMatcher
 import android.database.Cursor
 import android.net.Uri
+import ua.meugen.android.syncadapter.SyncAdapterContract
 import ua.meugen.android.syncadapter.db.SyncDb
 import ua.meugen.android.syncadapter.db.SyncItemContract
 
@@ -14,12 +15,10 @@ import ua.meugen.android.syncadapter.db.SyncItemContract
 class SyncProvider: ContentProvider() {
 
     companion object {
-        val AUTHORITY: String get() = "ua.meugen.android.syncadapter"
-
         val ITEMS_PATH = "items"
         val ITEMS_URI: Uri get() = Uri.Builder()
                 .scheme("content")
-                .authority(AUTHORITY)
+                .authority(SyncAdapterContract.AUTHORITY)
                 .path(ITEMS_PATH)
                 .build()
 
@@ -33,8 +32,8 @@ class SyncProvider: ContentProvider() {
     override fun onCreate(): Boolean {
         syncDb = SyncDb(context)
         matcher = UriMatcher(UriMatcher.NO_MATCH)
-        matcher.addURI(AUTHORITY, ITEMS_PATH, ITEMS_CODE)
-        matcher.addURI(AUTHORITY, ITEMS_PATH + "/#", ITEM_BY_ID_CODE)
+        matcher.addURI(SyncAdapterContract.AUTHORITY, ITEMS_PATH, ITEMS_CODE)
+        matcher.addURI(SyncAdapterContract.AUTHORITY, ITEMS_PATH + "/#", ITEM_BY_ID_CODE)
         return true
     }
 

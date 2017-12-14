@@ -24,7 +24,7 @@
         </activity>
 
         <provider
-            android:authorities="ua.meugen.android.syncadapter"
+            android:authorities="@string/authority"
             android:name=".provider.SyncProvider"
             android:exported="true"
             android:enabled="true"

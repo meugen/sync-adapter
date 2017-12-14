@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sync-adapter
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:contentAuthority="ua.meugen.android.syncadapter"
-    android:accountType="ua.meugen.android.syncadapter.datasync"
+    android:contentAuthority="@string/authority"
+    android:accountType="@string/account_type"
     android:userVisible="true"
     android:supportsUploading="false"
     android:allowParallelSyncs="false"

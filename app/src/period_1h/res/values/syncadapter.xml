@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sync Adapter (1h)</string>
+    <string name="authority">ua.meugen.android.syncadapter.period_1h</string>
+    <string name="account_type">ua.meugen.android.syncadapter.period_1h.datasync</string>
+</resources>

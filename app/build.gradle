@@ -18,6 +18,34 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions "period"
+    productFlavors {
+        period_1h {
+            dimension "period"
+            applicationIdSuffix ".period_1h"
+            versionNameSuffix "-period-1h"
+        }
+        period_6h {
+            dimension "period"
+            applicationIdSuffix ".period_6h"
+            versionNameSuffix "-period-6h"
+        }
+        period_1d {
+            dimension "period"
+            applicationIdSuffix ".period_1d"
+            versionNameSuffix "-period-1d"
+        }
+        period_1w {
+            dimension "period"
+            applicationIdSuffix ".period_1w"
+            versionNameSuffix "-period-1w"
+        }
+        period_1m {
+            dimension "period"
+            applicationIdSuffix ".period_1m"
+            versionNameSuffix "-period-1m"
+        }
+    }
 }
 
 dependencies {
