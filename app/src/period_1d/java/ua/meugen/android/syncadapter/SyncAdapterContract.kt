@@ -10,5 +10,5 @@ object SyncAdapterContract {
     val AUTHORITY: String get() = "ua.meugen.android.syncadapter.period_1d"
     val ACCOUNT_NAME: String get() = "datasync"
     val ACCOUNT_TYPE: String get() = AUTHORITY + "." + ACCOUNT_NAME
-    val PERIOD: Long get() = TimeUnit.HOURS.toSeconds(1)
+    val PERIOD: Long get() = TimeUnit.DAYS.toSeconds(1)
 }
